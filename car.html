@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/public.css" type="text/css" />
+    <link rel="stylesheet" href="css/style_car.css" type="text/css" />
+    
+</head>
+
+<body>
+<header>
+    <div class="margin t1">
+        <div class="header-l">
+            <span>吱，欢迎来到次元仓</span>
+            <div class="login-register">
+                <a href="./login.html">请登录</a>
+                <a href="./register.html">免费注册</a>
+            </div>
+        </div>
+        <div class="header-r">
+            <a href="#">我的订单</a>
+            <a href="./car.html" target="_blank"><img src="images/car.png" /><span>购物车</span><b>0</b></a>
+            <a href="#">收藏夹</a>
+            <a href="#">联系客服</a>
+            <a href="#" class="weibo"><em></em><span class="fText">加关注</span></a>
+        </div>
+    </div>
+</header>
+
+<section id="top">
+    <div class="margin">
+        <a href="index.html" class="top-l"><img src="images/logo.png"></a>
+        <div class="top-c">
+            <form action="index.php" method="get" target="_blank" id="search">
+                <input type="text" name="q" value="" id="search_key">
+                <input type="submit" name="" value="搜&nbsp;索">
+                <select name="page_type" class="search_type" style="height:34px; ">
+                    <option value="1" selected="selected">商品</option>
+                    <option value="2">店铺</option>
+                </select>
+            </form>
+            <ul class="xialalan" id="xialalan" style="display: none;"></ul>
+            <div class="guanjianci">
+                <a href="#" title="lolita">lolita</a>
+                <a href="#" title="Honest">Honest</a>
+                <a href="#" title="人">人</a>
+                <a href="#" title="画影">画影</a>
+                <a href="#" title="风荷举">风荷举</a>
+                <a href="#" title="剑三">剑三</a>
+                <a href="#" title="举">举</a>
+                <a href="#" title="鹤归">鹤归</a>
+                <a href="#" title="烟昔泠">烟昔泠</a>
+                <a href="#" title="鲛人歌">鲛人歌</a>
+                <a href="#" title="风荷">风荷</a>
+            </div>
+        </div>
+        <a href="http://cycang.com/act.php?c=appDownload" class="top-r" target="_blank">
+			<img src="images/qr.png" alt="" target="_blank">
+			<p style="text-align: center;">下载手机次元仓</p>
+		</a>
+    </div>
+</section>
+<nav id="list">
+    <div class="margin">
+        <a href="index.html" target="_blank">首页</a>
+        <a href="list.html" target="_blank">图书仓</a>
+        <a href="list.html" target="_blank">汉风仓</a>
+        <a href="list.html" target="_blank">手办仓</a>
+        <a href="list.html" target="_blank">首饰仓</a>
+        <a href="list.html" target="_blank">零食仓</a>
+        <a href="list.html" target="_blank">文具仓</a>
+        <a href="list.html" target="_blank">古风仓</a>
+        <a href="list.html" target="_blank">装扮仓</a>
+        <a href="list.html" target="_blank">周边仓</a>
+        <a href="list.html" target="_blank">服饰仓</a>
+    </div>
+</nav>
+
+
+<section id="car-main">
+    <div class="margin">
+        <table cellspacing="0" cellpadding="10xp"  id="shop">
+			<thead>
+				<tr class="shop-t">
+					<th class="shop-all"  class="checked123">
+						<input type="checkbox" name="checked-all" id="check-all"/>全不选
+					</th>
+					<th class="shop-t-info">
+						商品信息
+					</th>
+					<th class="shop-t-price">
+						销售价
+					</th>
+					<th class="shop-t-num">
+						数量
+					</th>
+					<th class="shop-t-allprice">
+						小计
+					</th>
+					<th class="shop-t-delete">
+						操作
+					</th>
+				</tr>
+			</thead>
+			<tbody class="shop-tbody">
+				
+			</tbody>
+			<tfoot>
+				<tr class="shop-b1">
+					<td class="shop-all">
+						<input type="checkbox" name="checked-all" id="check-all" />全选
+					</td>
+					<td class="shop-b-delete">
+						删除选中商品
+					</td>
+					<td class="shop-b-clear">
+                        总计：
+					</td>
+					<td class="shop-b-num">
+						
+					</td>
+					<td class="shop-b-prices"  colspan="2">
+						<!-- 已经选中<span>&nbsp;1</span>件商品，合计<span>&nbsp;999</span>元； -->
+						
+					</td>
+				</tr>
+				<tr class="shop-b2">
+					<td colspan="3"></td>
+					<td class="shop-b2"  colspan="2">
+						应付总额：<span class="shop-b2-word"></span>&nbsp;元
+					</td>
+					<td class="shop-b2-word-r">
+						<a href="./images/pay.jpg">付款</a>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+    </div>
+</section>
+
+<footer>
+    <div class="margin">
+        <div class="bottom">
+            <dl>
+                <dt>商务合作</dt>
+                <dd><a href="index.php?a=cooper" target="_blank">品牌进驻</a></dd>
+                <dd><a href="index.php?a=cooper" target="_blank">IP授权</a></dd>
+                <dd><a href="index.php?a=cooper" target="_blank">批发代销</a></dd>
+                <dd><a href="index.php?a=cooper" target="_blank">票务合作</a></dd>
+            </dl>
+            <dl>
+                <dt>联系方式</dt>
+                <dd>官方邮箱：act@cycang.com</dd>
+                <dd>推广合作：act@cycang.com</dd>
+                <dd>媒体合作：act@cycang.com</dd>
+                <dd>商务合作：cycswb@126.com</dd>
+            </dl>
+            <dl>
+                <dt>客服售后</dt>
+                <dd>客服热线：400-667-1673</dd>
+                <dd>客服QQ1：3112573893</dd>
+                <dd>客服QQ2：2627466500</dd>
+            </dl>
+            <dl>
+                <dt>直播合作</dt>
+                <dd>QQ：2201959143</dd>
+            </dl>
+            <dl class="dl-te">
+                <dt>友情链接：</dt>
+                <dd>
+                    <a href="http://www.meng2u.com" target="_blank">麦萌对手戏</a>
+                </dd>
+                <dd>
+                    <a href="https://www.bearead.com/" target="_blank">白熊阅读</a>
+                </dd>
+                <dd>
+                    <a href="http://www.icartoons.cn/portal/index.html" target="_blank">爱动漫</a>
+                </dd>
+            </dl>
+            <ul class="bottom-right">
+                <li>
+                    <a href="//cycang.com/act.php?c=appDownload" target="_blank">
+                        <img class="c_qr" src="images/qr.png" alt="">
+                        <p class="c_red_light">下载手机次元仓</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p class="p">
+        ICP © 2017 广州脑动网络科技有限公司 版权所有 <a href="#"> 免责声明</a>（备案号：<a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank">粤ICP备15028368号</a>)
+    </p>
+</footer>
+</body>
+<script src="js/ajax.2.0.js"></script>
+<script src="js/jquery.js"></script>   
+<script>
+;(function(){
+    "use strict"
+    class Car{
+        constructor(){
+            this.url = "http://localhost/ciyuancang/data/goods.json";
+            this.tbody = document.getElementsByTagName("tbody")[0];
+            this.pay = document.getElementsByClassName("shop-b2-word")[0];
+            this.tbodyObj = document.querySelector("tbody");
+            // console.log(this.tbody)
+            // 1.开始请求所有数据
+            this.load();
+            // 4.利用事件委托绑定删除和改数量的事件
+            this.payFor();
+            this.addEvent();
+        }
+        payFor(){
+            this.load();
+        }
+        load(){
+            var that = this;
+            ajax({
+                url:this.url,
+                success:function(res){
+                    that.res = JSON.parse(res);
+                    // 2.ajax请求成功之后，获取localstorage
+                    that.getLocal();
+                }
+            })
+        }
+        getLocal(){
+            // 获取
+            this.goods = localStorage.getItem("goods") ? JSON.parse(localStorage.getItem("goods")) : [];
+            // 3.渲染页面
+            this.display()
+        }
+        display(){
+            var str = "";
+            var priceAll = "";
+            var arr = 0;
+            for(var i=0;i<this.res.length;i++){
+                for(var j=0;j<this.goods.length;j++){
+                    // 比较筛选
+                    if(this.res[i].goodsId == this.goods[j].id){
+                        priceAll = `${this.res[i].price * this.goods[j].num}`;
+                        arr += parseInt(priceAll);
+                        str +=	`<tr index="${this.res[i].goodsId}" class="shop-c">
+                                    <td class="shop-c-select">
+                                        <input type="checkbox" name="checked" id="check-shop-c" />
+                                        <img src="${this.res[i].url}" />
+                                    </td>
+                                    <td class="shop-c-info">
+                                        ${this.res[i].name}
+                                    </td>
+                                    <td class="shop-c-price">
+                                        ￥${this.res[i].price}
+                                    </td>
+                                    <td class="shop-c-num">
+                                        <span class="car-jian">-</span>
+                                        <input id="car-num" class="car-num" value="${this.goods[j].num}" readonly="readonly" min="1">
+                                        <span class="car-jia">+</span>
+                                    </td>
+                                    <td class="shop-c-allprice">
+                                        ￥${(this.res[i].price) * (this.goods[j].num)}
+                                    </td>
+                                    <td class="shop-c-delete">
+                                        <input type="button" name="shop-c-delete-btn" id="shop-c-delete-btn" class="delete" value="删除" />
+                                    </td>
+                                </tr>`
+                    }
+
+                }
+
+            }
+            // 填充
+            this.pay.innerHTML = arr;
+            this.tbody.innerHTML = str;
+        }
+        addEvent(){
+            var that = this;
+            this.tbody.addEventListener("click",function(eve){
+                var e = eve || window.event;
+                var target = e.target || e.srcElement;
+                if(target.className == "delete"){
+                    // 5.保存点击删除的商品的id
+                    that.id = target.parentNode.parentNode.getAttribute("index");
+                    // 6.删除DOM元素
+                    target.parentNode.parentNode.remove();
+                    // 7.从localstorage中找到对应的商品数据
+                    that.setLocal(function(i){
+                        // 删除
+                        that.goods.splice(i,1);
+                    });
+                }
+            })
+            this.tbody.addEventListener("input",function(eve){
+                var e = eve || window.event;
+                var target = e.target || e.srcElement;
+                if(target.className == "num"){
+                    // 8.保存点击删除的商品的数量和id
+                    that.val = target.value;
+                    that.id = target.parentNode.parentNode.getAttribute("index");
+                    // 9.从localstorage中找到对应的商品数据
+                    that.setLocal(function(i){
+                        // 修改
+                        that.goods[i].num = that.val;
+                        
+                    })
+                }
+            })
+            this.tbodyObj.addEventListener("click",function(eve){
+                var e = eve || window.event;
+                var target = e.target || e.srcElement;
+                if(target.className == "car-jia"){
+                    target.parentNode.children[1].value++;
+                }
+                if(target.className == "car-jian"){
+                    if(target.parentNode.children[1].value<=1){
+                        return false;
+                    }else{
+                        target.parentNode.children[1].value--;
+                    }
+                }
+            })
+
+        }
+        setLocal(fn){
+            // 遍历localstorage的数据
+            for(var i=0;i<this.goods.length;i++){
+                // 判断符合
+                if(this.goods[i].id == this.id){
+                    // 做拿到相同数据之后的操作，可能是删除，可能是修改，取决于回调函数中传什么
+                    fn(i);
+                    location.reload();
+                }
+            }
+            // 再设置回去，实现修改localstorage的目的
+            localStorage.setItem("goods",JSON.stringify(this.goods));
+        }
+        
+    }
+
+    new Car();
+    function fn(){
+
+            var hObj = document.getElementsByName("checked");
+            var sxObj = document.getElementsByName("checked-all")[0];
+            var cxObj = document.getElementsByName("checked-all")[1];
+            // console.log(hObj,sxObj,cxObj)
+            cxObj.onclick = function(){
+                for(var i = 0;i < hObj.length;i++){
+                    hObj[i].checked = this.checked;
+                }
+                sxObj.checked=false;
+            }
+            sxObj.onclick = function(){
+                for(var i = 0;i<hObj.length;i++){
+                        hObj[i].checked = false;
+                }
+                cxObj.checked=false;
+            }
+            
+        }
+        fn();
+})();
+
+</script>
+</html>

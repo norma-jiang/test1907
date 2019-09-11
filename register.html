@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<title>注册-次元仓</title>
+	<style>
+		html,body{margin:0;padding:0;}
+		ul,li{margin:0;padding:0;list-style: none;}
+		a{text-decoration: none;}
+		.margin{width:1040px;margin:0 auto;overflow:hidden;}
+        header{width:1040px;height:90px;display:flex;margin:0 auto;}
+        header a{margin: 20px 0 0 5px;cursor:pointer;}
+		header img{width:146px;height:60px;}
+		header div{width: 1px;height: 29px;background: #333;margin: 50px 18px 0;}
+		header h1{font-size: 22px;margin-top:50px;font-weight:400;}
+		#main{width:1263px;height:570px;;background: url("http://www.cycang.com/Public/build/img/i/register/reg_bg.png") center no-repeat;margin:0 auto;background-size:1800px 670px;}
+		ul{margin:120px 0 0 35px;}
+		ul li label{display:flex;}
+        ul li span{font:17px/40px "";color:#666;width:100px;text-align:center;}
+        ul li [type="text"]{background:#FFF url(http://www.cycang.com/Public/build/img/i/register/reg_ph.png) 278px 7px no-repeat;}
+        ul li [type="password"]{background:#FFF url(http://www.cycang.com/Public/build/img/i/register/reg_lock.png) 278px 10px no-repeat;}
+        ul li input{height: 40px;width: 300px;border: 1px solid #d3d3d3;border-radius: 4px 4px 4px 4px;font-size: 16px;padding: 10px;margin: 0 0 20px 10px;box-sizing:border-box;}
+		ul li .ck{width:13px;height:13px;margin:4px 7px 0 100px;}
+		ul li.check{font:12px;display: flex;margin-bottom:20px;}
+		li li.check u{display:inline;}
+		ul li.check a{color:#ed3f3f;}
+		ul li.submit{margin-left:100px;font:15px/42px "";display:flex;}
+		ul li.submit .submit{width:160px;border-radius:4px;background:#ed3f3f;color:#fff;}
+		ul li.submit a{height:40px;box-sizing:border-box;margin-left:14px;width:126px;text-align:center;font:15px/42px "";border-radius:4px;border:1px solid #ed3f3f;background:#FFF;color:#666;}
+		p{font:12px/6 "";text-align:center;    color: rgb(108, 108, 108);}
+		p a{color:#333;}
+	</style>
+</head>
+<body>
+<header>
+		<a href="index.html"><img src="http://www.cycang.com/Public/build/img/i/login/loginreg_logo.png" /></a>
+		<div class="c_line c_fl"></div>
+		<h1>欢迎注册</h1>
+</header>
+<section id="main">
+	<div class="margin">
+		<ul class="box">
+				<li>
+					<label><span>手机号：</span><input type="text" class="" id="phone" name="phone" placeholder="请输入手机号"></label>	
+				</li>
+				<li>
+					<label><span>密码：</span><input type="password" class="" name="pwd" id="pwd" placeholder="请输入您的密码"></label>	
+				</li>
+				<li>
+					<label><span>确认密码：</span><input type="password" class="" name="repwd" id="repwd" placeholder="请再次输入密码"></label>
+				</li>
+				<li class="check">
+					<label><input type="checkbox" name="if_agree" checked="" class="ck"><u>阅读并接受次元仓</u></label><a href="#">[用户协议]</a>
+				</li>
+				<li class="submit">
+					<input type="submit" value="注&nbsp;&nbsp;册" class="submit" id="submit" />
+					<a href="login.html" class="">返回登录</a>
+				</li>
+			</ul>
+	</div>
+</section>
+	<p>
+        ICP © 2017 广州脑动网络科技有限公司 版权所有 <a href="#"> 免责声明</a>（备案号：<a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank">粤ICP备15028368号</a>)
+    </p>
+</body>
+<script>
+class Register{
+	constructor(){
+		this.user = document.getElementById("phone")
+		this.pass = document.getElementById("pwd")
+		this.repass = document.getElementById("repwd")
+		this.btn = document.getElementById("submit")
+		// this.span = document.querySelector(".box span")
+
+		this.addEvent()
+	}
+	addEvent(){
+		var that = this;
+		this.btn.onclick = function(){
+			that.setLocal()
+		}
+	}
+	setLocal(){
+		// 之前有没有
+		this.userMsg = localStorage.getItem("userMsg");
+		this.userMsg = this.userMsg ? JSON.parse(this.userMsg) : [];
+
+		var geshi = /^1[356789]\d{9}$/;
+		if(geshi.test(this.user.value)){
+			// 之前没有，直接存
+			if(this.userMsg.length<1){
+				this.userMsg.push({
+					user:this.user.value,
+					pass:this.pass.value,
+					onoff:0
+				})
+			}else{
+				// 之前有，判断是否重名
+				var o = this.userMsg.some(val=>{
+					return val.user === this.user.value;
+				})
+				if(o){
+					alert("重名");
+					this.user.value="";
+					this.pass.value="";
+					this.repass.value="";
+				}else{
+					// this.span.innerHTML = "";
+					alert("注册成功");
+					this.userMsg.push({
+						user:this.user.value,
+						pass:this.pass.value,
+						onoff:0
+					})
+				}
+			}
+			localStorage.setItem("userMsg",JSON.stringify(this.userMsg))
+		}else{
+			alert("请输入正确的手机号");
+			this.user.value="";
+			this.pass.value="";
+			this.repass.value="";
+		}
+		
+	}
+}
+
+new Register();
+
+</script>
+</html>

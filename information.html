@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/public.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.information.css" type="text/css" />
+    
+</head>
+
+<body>
+<header>
+    <div class="margin-information t1">
+        <div class="header-l">
+            <span>吱，欢迎来到次元仓</span>
+            <div class="login-register">
+                <a href="./login.html">请登录</a>
+                <a href="./register.html">免费注册</a>
+            </div>
+        </div>
+        <div class="header-r">
+            <a href="#">我的订单</a>
+            <a href="./car.html" target="_blank"><img src="images/car.png" /><span>购物车</span><b>0</b></a>
+            <a href="#">收藏夹</a>
+            <a href="#">联系客服</a>
+            <a href="#" class="weibo"><em></em><span class="fText">加关注</span></a>
+        </div>
+    </div>
+</header>
+
+<section id="top">
+    <div class="margin-information">
+        <a href="index.html" class="top-l"><img src="images/logo.png"></a>
+        <div class="top-c">
+            <form action="index.php" method="get" target="_blank" id="search">
+                <input type="text" name="q" value="" id="search_key">
+                <input type="submit" name="" value="搜&nbsp;索">
+                <select name="page_type" class="search_type" style="height:34px; ">
+                    <option value="1" selected="selected">商品</option>
+                    <option value="2">店铺</option>
+                </select>
+            </form>
+            <ul class="xialalan" id="xialalan" style="display: none;"></ul>
+            <div class="guanjianci">
+                <a href="#" title="lolita">lolita</a>
+                <a href="#" title="Honest">Honest</a>
+                <a href="#" title="人">人</a>
+                <a href="#" title="画影">画影</a>
+                <a href="#" title="风荷举">风荷举</a>
+                <a href="#" title="剑三">剑三</a>
+                <a href="#" title="举">举</a>
+                <a href="#" title="鹤归">鹤归</a>
+                <a href="#" title="烟昔泠">烟昔泠</a>
+                <a href="#" title="鲛人歌">鲛人歌</a>
+                <a href="#" title="风荷">风荷</a>
+            </div>
+        </div>
+        <a href="http://cycang.com/act.php?c=appDownload" class="top-r" target="_blank">
+			<img src="images/qr.png" alt="" target="_blank">
+			<p style="text-align: center;">下载手机次元仓</p>
+		</a>
+    </div>
+</section>
+<nav id="information-nav">
+    <div class="margin-information">
+        <a href="index.html" target="_blank">首页</a>
+        <a href="list.html" target="_blank">图书仓</a>
+        <a href="list.html" target="_blank">汉风仓</a>
+        <a href="list.html" target="_blank">手办仓</a>
+        <a href="list.html" target="_blank">首饰仓</a>
+        <a href="list.html" target="_blank">零食仓</a>
+        <a href="list.html" target="_blank">文具仓</a>
+        <a href="list.html" target="_blank">古风仓</a>
+        <a href="list.html" target="_blank">装扮仓</a>
+        <a href="list.html" target="_blank">周边仓</a>
+        <a href="list.html" target="_blank">服饰仓</a>
+    </div>
+</nav>
+
+<section id="information-main">
+    <div class="margin-information">
+        <div class="information-main-left">
+            <div class="image-small">
+                <img class="information-url" src="http://f.p.cycangcdn.com/1565167837109.jpg" />
+                <!-- <p class="image-move"></p> -->
+            </div>
+            <div class="image-big">
+                <img class="information-url look_girl" src="http://f.p.cycangcdn.com/1565167837109.jpg" />
+            </div>
+           
+
+        </div>
+        <div class="information-main-right">
+            <p class="information-name" title="">【流烟昔泠-团扇】</p>
+            <div class="product_information">
+                <div class="product_price">
+                    <span class="span-left">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</span><span class="information-price">￥</span>
+                </div>
+                <div class="product_service">
+                    <div class="product_service-left">
+                        <span class="span-left">服&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务：</span>
+                        <a href="#">
+                            由<span class="information-service"> </span>发货
+                        </a>
+                    </div>
+                    <a href="https://static.meiqia.com/dist/standalone.html?eid=17853&amp;metadata=%7B%22%5Cu5546%5Cu54c1%5Cu94fe%5Cu63a5%22%3A%22http%3A%5C%2F%5C%2Fcycang.com%5C%2Findex.php%3Fa%3Dp%26id%3D21131%22%7D" target="_blank" class="product_service-right">
+                        <img class="product_service-right_icon" src="http://www.cycang.com/Public/build/img/service_icon.png">
+                        <span class="product_service-right_title">联系客服</span>
+                    </a>
+                </div>
+            </div>
+            <div class="product_style">
+                <span class="span-left">款&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;式：</span>
+                <i class="information-style">月</i>
+            </div>
+            <div class="product_number">
+                <span class="span-left">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：</span>
+                <div class="product_number-right">
+                    <span class="information-jian">-</span>
+                    <input id="information-number" class="information-number" value="1" readonly="readonly">
+                    <span class="information-jia">+</span>
+                </div>
+            </div>
+            <div class="product_buy">
+                <button id="tocar" class="tocar">加入购物车</button>
+                <button id="have" class="have">收藏</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="margin-information">
+        <div class="bottom">
+            <dl>
+                <dt>商务合作</dt>
+                <dd><a href="index.php?a=cooper" target="_blank">品牌进驻</a></dd>
+                <dd><a href="index.php?a=cooper" target="_blank">IP授权</a></dd>
+                <dd><a href="index.php?a=cooper" target="_blank">批发代销</a></dd>
+                <dd><a href="index.php?a=cooper" target="_blank">票务合作</a></dd>
+            </dl>
+            <dl>
+                <dt>联系方式</dt>
+                <dd>官方邮箱：act@cycang.com</dd>
+                <dd>推广合作：act@cycang.com</dd>
+                <dd>媒体合作：act@cycang.com</dd>
+                <dd>商务合作：cycswb@126.com</dd>
+            </dl>
+            <dl>
+                <dt>客服售后</dt>
+                <dd>客服热线：400-667-1673</dd>
+                <dd>客服QQ1：3112573893</dd>
+                <dd>客服QQ2：2627466500</dd>
+            </dl>
+            <dl>
+                <dt>直播合作</dt>
+                <dd>QQ：2201959143</dd>
+            </dl>
+            <dl class="dl-te">
+                <dt>友情链接：</dt>
+                <dd>
+                    <a href="http://www.meng2u.com" target="_blank">麦萌对手戏</a>
+                </dd>
+                <dd>
+                    <a href="https://www.bearead.com/" target="_blank">白熊阅读</a>
+                </dd>
+                <dd>
+                    <a href="http://www.icartoons.cn/portal/index.html" target="_blank">爱动漫</a>
+                </dd>
+            </dl>
+            <ul class="bottom-right">
+                <li>
+                    <a href="//cycang.com/act.php?c=appDownload" target="_blank">
+                        <img class="c_qr" src="images/qr.png" alt="">
+                        <p class="c_red_light">下载手机次元仓</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p class="p">
+        ICP © 2017 广州脑动网络科技有限公司 版权所有 <a href="#"> 免责声明</a>（备案号：<a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank">粤ICP备15028368号</a>)
+    </p>
+</footer>
+</body>
+<script src="js/ajax.2.0.js"></script>
+<script src="js/jquery.js"></script>   
+<script>
+ 
+ class Information{
+    constructor(){
+        this.url = "http://localhost/ciyuancang/data/goods.json";
+        this.buyObj = document.querySelector(".product_buy");
+        this.produceNumber = document.querySelector(".product_number-right");
+        this.number = document.querySelector(".information-number");
+        
+        this.load();
+        // 1.准备绑定点击事件
+        this.addEvent();
+    }
+    load(){
+        var that = this;
+        ajax({
+            url:this.url,
+            success:function(res){
+                that.res = JSON.parse(res);
+                // console.log(that.res);
+                var onlyId = JSON.parse(localStorage.getItem("onlyId"));
+                that.id = onlyId[0].id;
+                // console.log(onlyId[0]);
+                for(var i=0;i<that.res.length;i++){
+                    // 判断符合
+                    if(that.res[i].goodsId == onlyId[0].id){
+                        // 做拿到相同数据之后的操作，可能是删除，可能是修改，取决于回调函数中传什么
+                        $(".information-name").html(that.res[i].name);
+                        $(".information-price").html("￥"+that.res[i].price);
+                        $(".information-url").attr("src",that.res[i].url);
+                        $(".information-service").html(that.res[i].service);
+                        $(".information-style").html(that.res[i].style);
+                    }
+                }
+            }
+        })
+    }
+//     display(){
+//         // console.log(this.res);  
+//     }
+
+    addEvent(){
+        var that = this;
+        this.produceNumber.addEventListener("click",function(eve){
+            var e = eve || window.event;
+            var target = e.target || e.srcElement;
+            if(target.className == "information-jia"){
+                target.parentNode.children[1].value++;
+            }
+            if(target.className == "information-jian"){
+                if(target.parentNode.children[1].value<=1){
+                    return false;
+                }else{
+                    target.parentNode.children[1].value--;
+                } 
+            }
+        })
+        this.buyObj.addEventListener("click",function(eve){
+            var e = eve || window.event;
+            var target = e.target || e.srcElement;
+            if(target.className == "tocar"){
+                // 2.提前找到点击商品的唯一的id
+                that.num = target.parentNode.parentNode.children[3].children[1].children[1].value;
+                // 3.准备存储localstorage
+                that.setLocal();
+            }
+        })
+    }
+    setLocal(){
+        
+        // 数据的格式：[{id:,num:,},{},{}]
+        // 先读
+        this.goods = localStorage.getItem("goods") ? JSON.parse(localStorage.getItem("goods")) : [];
+
+        if(this.goods.length < 1){
+            // 第一次存，直接存
+            this.goods.push({
+                id:this.id,
+                num:this.num
+            })
+        }else{
+            // 准备存重复数据的索引
+            var i;
+            // 利用some遍历数组，检测是否有重复数据
+            var o = this.goods.some((val,index)=>{
+                // 每次将索引，保存出来，
+                i = index;
+                // 如果id重复了，返回true，同时some自动停止
+                return val.id == this.id;
+            })
+            // 如果some的返回值为true，表示肯定有一个值为true，那么表示有重复
+            if(o){
+                this.goods[i].num=parseInt(this.goods[i].num)+parseInt(this.number.value);
+            }else{  //否则没有重复，再新增数据
+                this.goods.push({
+                    id:this.id,
+                    num:this.number.value,
+                })
+            }
+
+        }
+        localStorage.setItem("goods",JSON.stringify(this.goods));
+    }
+}
+
+new Information();
+</script>
+
+
+
+
+
+<script>
+
+    // this.smallObj = document.getElementsByClassName('image-small')[0];
+    // this.moveObj = document.getElementsByClassName('image-move')[0];
+    // this.bigObj  = document.getElementsByClassName('image-big')[0];
+    // this.girlObj  =  document.getElementsByClassName('look_girl')[0];
+function Magnifier(){
+//				1.选择元素
+        this.sBox = document.querySelector(".image-small");
+        this.sImg = this.sBox.children[0];
+        this.bBox = document.querySelector(".image-big");
+        this.bImg = this.bBox.children[0];
+        this.juli = document.querySelector(".information-main-left");
+        
+//				2.绑定事件
+        this.addEvent()
+    }
+    Magnifier.prototype.addEvent = function(){
+        var that = this;
+//				进入事件
+        this.sBox.onmouseenter = function(){
+//					3-1.显示
+            that.show()
+        }
+//				离开事件
+        this.sBox.onmouseleave = function(){
+//					3-2.消失
+            that.hide()	
+        }
+//				移动事件
+        this.sBox.onmousemove = function(eve){
+            var e = eve || window.event
+//					3-3.移动
+            that.move(e);
+        }
+    }
+    Magnifier.prototype.show = function(){
+        this.bBox.style.display = "block";
+        
+//				提前判断,将来的实例身上是否有span属性,有就显示,没有就创建
+        if(!this.span){
+//				创建鼠标下方的蒙板
+            this.span = document.createElement("span");
+//							(06班留级的人数	/	06班总人数   = 06班留级比例)   *   05班的总人数
+//						(右边图片显示的尺寸	/	右边图片的总尺寸  = 显示的图片的比例) * 左边能显示的图片的总尺寸
+            var w = this.bBox.offsetWidth / this.bImg.offsetWidth * this.sBox.offsetWidth;
+            var h = this.bBox.offsetHeight / this.bImg.offsetHeight * this.sBox.offsetHeight;
+            var img = this.sBox.children[0].src;
+            this.span.style.cssText = `width:${w}px;height:${h}px;background:url(${img});background-size:350px 407px;position:absolute;left:0;top:0;`;
+            this.sBox.appendChild(this.span);
+        }
+        
+//				有,就显示
+        this.span.style.display = "block";
+        
+        this.sImg.style.opacity = "0.6"
+    }
+    Magnifier.prototype.hide = function(){
+//				消失
+        this.span.style.display = "none";
+        this.bBox.style.display = "none";
+        
+        this.sImg.style.opacity = "1"
+    }
+    Magnifier.prototype.move = function(e){
+//				计算移动的距离
+        var l = e.pageX - this.juli.offsetLeft - this.sBox.offsetLeft - this.span.offsetWidth/2;
+        var t = e.pageY + document.body.scrollTop-this.juli.offsetTop - this.sBox.offsetTop - this.span.offsetHeight/2;
+        
+//				span的边界限定
+        if(l < 0) l=0;
+        if(t < 0) t=0;
+        if(l > this.sBox.offsetWidth - this.span.offsetWidth){
+            l = this.sBox.offsetWidth - this.span.offsetWidth
+        }
+        if(t > this.sBox.offsetHeight - this.span.offsetHeight){
+            t = this.sBox.offsetHeight - this.span.offsetHeight
+        }
+//				设置span的位置
+        this.span.style.left = l + "px";
+        this.span.style.top = t + "px";
+        
+//				计算span移动的比例
+        var x = l / (this.sBox.offsetWidth - this.span.offsetWidth);
+        var y = t / (this.sBox.offsetHeight - this.span.offsetHeight);
+        
+//				根据比例,计算右边大图要移动的距离，注意方向
+        this.bImg.style.left = -x * (this.bImg.offsetWidth - this.bBox.offsetWidth) + "px";
+        this.bImg.style.top = -y * (this.bImg.offsetHeight - this.bBox.offsetHeight) + "px";
+        
+        
+        this.span.style.backgroundPosition = -l + "px " + -t +"px";
+    }
+    
+    new Magnifier;
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>登录-次元仓</title>
+    <style>
+        html,body{margin:0;padding:0;}
+        ul,li{margin:0;padding:0;list-style: none;}
+		a{text-decoration: none;}
+        header{width:1040px;height:90px;margin:0 auto;display:flex;justify-content: space-between;overflow:hidden;}
+        header a{margin:15px 0 0 20px;cursor: pointer;}
+        header a img{width:70px;}
+        header h1{font:400 20px/90px "";color:#333;margin-right:28px;}
+        #main{width:1263px;background: url("http://www.cycang.com/Public/build/img/i/login/login_bg.jpg") center no-repeat;margin:0 auto;background-size:1800px 670px;}
+        #main .margin{width:1040px;margin:0 auto;overflow:hidden;}
+        ul{box-shadow: 0 0 15px rgba(0,0,0,.3);margin:70px 20px 50px 0;float:right;width:390px;background:#fff;opacity: .87;padding:24px 45px;box-sizing: border-box;}
+        ul li{margin-bottom:20px;}
+        ul li:nth-child(1) p{margin-top:0px;font-size:20px;color:#333;}
+        ul .line {width: 390px;height: 1px;background-color: #ccc;margin: 24px 0 24px -45px;}
+        ul li.tip{color:#333;font-size:14px;}
+        ul li label{display:flex;}
+        ul li label span{width:42px;height:42px;border-radius:4px 0 0 4px;}
+        ul li label span.user{background:#d3d3d3 url("http://www.cycang.com/Public/build/img/i/login/user_icon.png") no-repeat 50%;}
+        ul li label span.pwd{background: #d3d3d3 url("http://www.cycang.com/Public/build/img/i/login/pwd_icon.png") no-repeat 50%;}
+        ul li label input{width:256px;height:42px;font:16px/42px "";padding:10px;border:1px solid #d3d3d3;box-sizing:border-box;border-radius:0 4px 4px 0;}
+        ul li .yan{width:auto;font-size: 16px;color: #666;line-height: 42px;}
+        ul li .code{margin-left:18px;height: 42px;width: 110px;border: 1px solid #d3d3d3;border-radius: 4px;padding: 10px;font-size: 16px;}
+        ul li.denglu{font:15px/42px "";display:flex;}
+		ul li.denglu .login{width:160px;border-radius:4px;background:#ed3f3f;color:#fff;text-align:center;}
+		ul li.denglu .reg{height:40px;box-sizing:border-box;margin-left:14px;width:126px;text-align:center;font:15px/42px "";border-radius:4px;border:1px solid #ed3f3f;background:#FFF;color:#666;}
+        ul li.remberme{display:flex;justify-content: space-between;color:#666;font-size:12px;}
+        ul li.remberme .rember{width:13px;height:13px;}
+        ul li.remberme span{width:auto;height:auto;}
+        ul li.remberme a{color:#666;}
+       
+        footer p{font:12px/6 "";text-align:center;color: rgb(108, 108, 108);}
+        footer p a{color:#333;}    
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="http://www.cycang.com/Public//build/img/shop/index/logo.png" /></a>
+        <h1>欢迎登录</h1>
+    </header>
+    <section id="main">
+        <div class="margin">
+            <ul class="box">
+                <li><p>用户登录</p></li>
+                <li>
+                    <label><span class="user"></span><input type="text" class="username" name="username" id="username" placeholder="请输入手机号" required=""></label>
+                </li>
+                <li>
+                    <label><span class="pwd"></span><input type="password" class="login" name="password" id="password" placeholder="密码" required=""></label>
+                </li>
+                <!-- <li>
+                    <label><span class="yan">验证码:</span><input type="text" class="code" name="captcha" id="code" placeholder="验证码" required=""></label>
+                    <img src="" class="code_img" id="verify" title="点击换一张"> 
+
+                </li> -->
+                <li class="remberme">
+                    <label><input type="checkbox" class="rember" name="remember" id="remember"><span class="rem">记住我</span></label>
+                    <a href="#" class="forget">忘记密码？</a>
+                </li>
+                <li class="denglu">
+                    <a href="###" class="login" id="login">登录</a>
+                    <a href="register.html" class="reg" id="reg-btn">快速注册</a>
+                </li>
+                <div class="line"></div>
+                <li class="tips">
+                    <span>1.担心邮费？次元仓自营商品首次下单、购物满69元均可免邮！</span><br>
+                    <span>2.木有优惠券？下载APP并注册、使用第三方账号首次登录、绑定手机三管齐下拿优惠券~</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>ICP © 2017 广州脑动网络科技有限公司 版权所有 <a href="#"> 免责声明</a>（备案号：<a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank">粤ICP备15028368号</a>)</p>
+    </footer>
+</body>
+<script>
+class Login{
+    constructor(){
+        this.user = document.getElementById("username")
+        this.pass = document.getElementById("password")
+        this.btn = document.getElementById("login")
+
+        this.addEvent();
+        this.getLocal();
+    }
+    addEvent(){
+        var that = this;
+        this.btn.onclick = function(){
+            that.login();
+        }
+    }
+    getLocal(){
+        // 之前有没有
+        this.userMsg = localStorage.getItem("userMsg");
+        this.userMsg = this.userMsg ? JSON.parse(this.userMsg) : [];
+    }
+    login(){
+        var i = 0;
+        var o = this.userMsg.some((val,index)=>{
+            i = index;
+            return val.user == this.user.value && val.pass == this.pass.value;
+        })
+        if(o){
+            // this.span.innerHTML = "成功";
+            this.userMsg[i].onoff = 1;
+            // var a = confirm("");
+            // alert("确认2s后进入主页...");
+            location.href = "index.html";
+            // setTimeout(() => {
+            //     location.href = "index.html";
+            // }, 2000);
+        }else{
+            alert("登录失败");
+        }
+        localStorage.setItem("userMsg",JSON.stringify(this.userMsg))
+    }
+}
+
+new Login();
+
+</script>
+</html>
